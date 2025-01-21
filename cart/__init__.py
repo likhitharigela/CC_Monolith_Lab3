@@ -14,7 +14,9 @@ class Cart:
     def load(data):
         return Cart(data['id'], data['username'], data['contents'], data['cost'])  
 
-
+# Avoid eval for security and performance
+# Simplify Nested Loops
+# These steps will optimize the code 
 def get_cart(username: str) -> list[Product]:
     cart_details = dao.get_cart(username)
     if not cart_details:

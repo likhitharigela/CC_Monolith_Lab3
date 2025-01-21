@@ -12,7 +12,7 @@ class Product:
     def load(data):
         return Product(data['id'], data['name'], data['description'], data['cost'], data['qty'])
 
-
+# Replaced the loop with a list comprehension (a list comprehension directly constructs the result) 
 def list_products() -> list[Product]:
     return [Product.load(product) for product in dao.list_products()]
 
